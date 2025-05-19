@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Roman LaBonte</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="grid-container">    
+    <div class="header">
+      <h1>My Gallery</h1>
+      <button type="button" class="collapsible">Menu</button>
+      <div class="menucontent">      
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>      
+    
+    <div style="grid-area: content1; grid-column: span 3;" class="content">
+      <h2>Portfolio Showcase</h2>
+      <p>A collection of my creative work and designs. </p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="bank.png" alt="Portfolio piece 1">
+        </div>
+        <div class="gallery-item">
+          <img src="fortune.png" alt="Portfolio piece 2">
+        </div>
+        <div class="gallery-item">
+          <img src="site.png" alt="Portfolio piece 3">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Roman LaBonte - All Rights Reserved
+    </div>
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    } 
+  </script>
+</body>
+</html>

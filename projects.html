@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Roman LaBonte</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="grid-container">    
+    <div class="header">
+      <h1>My Projects</h1>
+      <button type="button" class="collapsible">Menu</button>
+      <div class="menucontent">      
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>      
+    
+    <div style="grid-area: content1; grid-column: span 3;" class="content">
+      <h2>Featured Projects</h2>
+      <p>Here are some of my recent projects.</p>
+      
+      <div class="project-card">
+        <div class="content">
+          <h3>Bank Account GUI</h3>
+          <p>A fully responsive GUI for a simulated bank account app.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="content">
+          <h3>Fortune Teller GUI</h3>
+          <p>A fully responsive GUI for a simulated fortune telling app.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+      
+      
+      <div class="project-card">
+        <div class="content">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website focusing on modern design principles.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Roman LaBonte - All Rights Reserved
+    </div>
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    } 
+  </script>
+</body>
+</html>
